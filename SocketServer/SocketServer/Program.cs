@@ -42,7 +42,7 @@ namespace SocketServer
 				reader = new StreamReader(stream, encode);
 				writer = new StreamWriter(stream, encode) { AutoFlush = true };
 
-
+				 
 				// 서버는 무한 루프를 돌면서 읽어들인다.
 				while (true)
 				{
