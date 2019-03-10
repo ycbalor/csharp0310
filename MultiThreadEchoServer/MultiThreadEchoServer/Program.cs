@@ -52,11 +52,15 @@ namespace MultiThreadEchoServer
 				IPAddress ipAd = IPAddress.Parse("127.0.0.1");
 
 				tcpListener = new TcpListener(ipAd, 5001);
-				tcpListener.Start();
 
+				// Listenr, Loop, AcceptSocket();
+
+				tcpListener.Start(); // 1
+
+				// 2
 				while (true)
 				{
-
+					// 3을하면 통신을 위한 소켓이 만들어짐
 					clientSocket = tcpListener.AcceptSocket();
 					ClientHandler cHandlere = new ClientHandler(clientSocket);
 					Thread t = new Thread(cHandlere.Chat);

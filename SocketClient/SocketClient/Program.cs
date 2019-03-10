@@ -6,6 +6,10 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
+// 클라이언트에서 요청 큐에 저장
+// 서버에서 요청큐에서 하나 빼와서 소켓을 하나 만듬
+// 소켓을 가지고 스트림을 생성한다
+
 namespace SocketClient
 {
 	class Program
